@@ -146,7 +146,66 @@ if($x % 3 == 0 && $x % 7 ==0){
 }elseif($x %7 ==0){
   echo 'x is a multiple of 7 but not a multiple of 3.';
 }else{
-  echo 'x is neither a multiple of 7 nor a multiple of 3.'
+  echo 'x is neither a multiple of 7 nor a multiple of 3.';
 }
 
+?>
+<br>
+<?php
+
+/* switch Statements
+The switch statement is another way to control the flow of your code to make it easier to read and understand, especially when conditional branching gets complicated. switch statements usually have many cases. The first case that matches the condition value will get executed. When there is no match, the default case is executed. */
+// Assign a number to $num
+$num = 50;
+// Assign the remainder of $num divided by 3
+$remainder = $num % 3;
+
+switch ($remainder) {
+  case 0:
+    echo 'Very lucky!!';
+    break;
+    
+  case 1:
+    echo 'Lucky!';
+    break;
+  
+  case 2:
+    echo 'A little lucky.';
+    break;
+    
+  default:
+    echo 'Unlucky...';
+    break;
+}
+?>
+
+<br>
+
+<?php
+/* Arrays
+Creating Arrays
+The basic syntax for declaring an array is as follows: $arrayName = array(value1, value2, …);. An index number is designated to each array element in order from 0 to the last element. To retrieve data from an array, we use these index numbers like so: $arrayName[indexNumber]. */
+  // Create a color array 
+  $colors = array ('Red', 'Blue', 'Yellow');
+    
+  echo $colors[0];
+  
+  $colors[] = 'White';
+  
+  echo $colors[3];
+?>
+
+<br>
+
+<?php
+/*Associative Arrays
+Creating Associative Arrays
+Associative arrays allow us to manage a collection of data like normal arrays. The difference is that instead of using index numbers to manage individual elements, you can specify values as keys. Keys can come in the form of strings. You can set the key for a value with => as follows: arrayName = array('keyName' => 'value1', ...);. */
+$user = array('name' => 'mbk' , 'age' => 45, 'jobTitle' => 'Cruiser');
+
+echo $user['name'];
+
+$user['level'] = 'Beginner';
+
+echo $user['level'];
 ?>
