@@ -209,3 +209,54 @@ $user['level'] = 'Beginner';
 
 echo $user['level'];
 ?>
+
+<?php
+/*The while loop allows you to iterate code like the for loop. When a condition is specified, the code in the loop gets repeatedly executed while it is true. Different from the for loop, the increment of the variable, $i++; in this case, has to be written in the loop. This is an important difference between while loops and for loops.*/
+ // Declare the $i variable
+
+
+ //algorithm to print even numbers between 2 and 100 using while loop
+    $i =2;
+    
+    // Write the while loop below
+    
+    while($i <=100){
+      if($i %2 ===0){
+        echo $i .'<br>';
+      }
+     $i++;
+    }
+?>
+
+
+<?php
+/*Break
+The break statement forcibly ends the current loop and is used in iterative statements like loops (for, while, foreach, etc). break statements are generally used in combination with conditional statements like if statements.*/
+ 
+    // Writing for loop to print between 1 to 1000 and using break to terminate the loop at 500
+    for ($i = 1; $i <= 1000; $i++) {
+      if ($i > 500) {
+        break;
+      }
+
+      echo $i;
+      echo '<br>';
+    }
+?>
+
+
+<?php
+/*Continue
+While the break statement completely exits the loop, the continue statement only skips the current iteration but remains in the loop. The continue statement can also be used in iterative statements such as for, while, foreach, etc.*/
+ 
+    /*Writing Use the for loop and echo to print the numbers 1 to 1000. 
+However, skip the numbers that are multiples of 3 using continue.*/
+    
+    // Write the for loop below
+    for($i =1 ; $i<=1000; $i++){
+      if($i %3 ===0){
+        continue;
+      }
+      echo $i.'<br>';
+    }
+?>
