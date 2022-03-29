@@ -365,3 +365,83 @@ A function can return a value, and this value is known as the return value. It's
     echo $circleArea;
     
 ?>
+
+<?php
+/*<form>
+Creating Forms
+To finish up, let's make a contact form! We can make the form's design with HTML and then use PHP to handle the input values.*/
+ 
+    /*<form>
+Preparing Forms
+When creating a form, we use the HTML tag <form>. For the action attribute, we specify the URL to pass the data. The method attribute is set to either get or post for sending the form values. When using get, the value to be sent is displayed in the URL whereas when using post, it's hidden in the URL.*/
+    
+
+//Receiving Data from Forms
+//We use $_POST to receive the value we submitted in the form. $_POST is an associative array. Therefore, we can receive the value we submitted by putting the name attribute of <input> and <textarea> in brackets []*/
+
+?>
+
+<div class="main">
+    <div class="contact-form">
+      <div class="form-title">Contact</div>
+      <form method="post" action="sent.php">
+        <div class="form-item">Name</div>
+        <input type="text" name="name">
+
+        <!-- markup for textarea explanation  -->
+         <div class="form-item">Age</div>
+        <!-- Write the <select> tag below -->
+        <select name ="age">
+          <option value="unselected">Select your age</option>
+          
+          <!-- Use a for loop to make age options 6 to 100 -->
+        
+          <?php 
+              for($i =6; $i<=100; $i++){
+                echo"<option value='{$i}'>{$i}</option>";
+              }
+          ?>
+        </select>
+
+        <div class="form-item">Category</div>
+        <?php 
+          $types = array('About Progate', 'Comments/Opinions', 'Job inquiry', 'Media', 'Payment', 'Other');
+         ?>
+        <!-- Write the <select> tag below -->
+        <select name='category'>
+          <option value="unselected">Select reason for contacting us</option>
+          <?php foreach($types as $type){
+            echo "<option value='{$type}'>{$type}</option>";
+          }?>
+        </select>
+        
+
+        <div class="form-item">Message</div>
+        <textarea name="body"></textarea>
+
+        <!-- Create the submit button below -->
+        <input type="submit" value="Submit">
+        
+      </form>
+    </div>
+  </div>
+
+  <?php
+/*<form>
+<select>
+How to Create a Select Box
+We can create a dropdown box like the one shown in the example below by arranging <option> tags inside a <select> tag. The content of the <option> tag is displayed as a choice.*/
+ 
+    /*<select>
+Submitting Selected Values
+Let's take a look at how to pass in the value of the dropdown list. The <select> tag has a name attribute to receive the value with $_POST. The value attribute of the <option> tag is the value to be sent.*/
+    
+
+//Receiving Data from Forms
+//We use $_POST to receive the value we submitted in the form. $_POST is an associative array. Therefore, we can receive the value we submitted by putting the name attribute of <input> and <textarea> in brackets []*/
+//Finishing the Form
+//This is the last exercise! Let's create a lot of <option> tags using iteration and variable substitution. When using variable substitution, make sure to put the code in double quotes " when appropriate.
+?>
+
+
+
