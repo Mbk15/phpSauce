@@ -344,3 +344,24 @@ When calling a function, you can pass a value to be used within the function. Va
     
 printRectangleArea(5,10);
 ?>
+
+<?php
+/*Return Types
+Return Values
+A function can return a value, and this value is known as the return value. It's like executing a function and the function execution part is replaced by the return value. The return value is specified by return.*/
+ 
+    
+    // Define the getCircleArea function
+    
+    function getCircleArea($radius){
+      return $radius * $radius * 3;
+      
+    }
+    // Call the getCircleArea function and assign the return value to the $circleArea variable
+    
+   $circleArea = getCircleArea(5);
+    // Print the $circleArea variable
+    
+    echo $circleArea;
+    
+?>
