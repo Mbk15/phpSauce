@@ -249,7 +249,7 @@ The break statement forcibly ends the current loop and is used in iterative stat
 /*Continue
 While the break statement completely exits the loop, the continue statement only skips the current iteration but remains in the loop. The continue statement can also be used in iterative statements such as for, while, foreach, etc.*/
  
-    /*Writing Use the for loop and echo to print the numbers 1 to 1000. 
+    /*Writing the for loop and echo to print the numbers 1 to 1000. 
 However, skip the numbers that are multiples of 3 using continue.*/
     
     // Write the for loop below
@@ -259,4 +259,88 @@ However, skip the numbers that are multiples of 3 using continue.*/
       }
       echo $i.'<br>';
     }
+?>
+
+<?php
+/*foreach
+The foreach loop iterates over an indexed array or associative array in order from the first value. You can retrieve values in arrays one by one as shown below. Values are sequentially assigned to the variable after the keyword as at the start of each loop. The variable name after as can be anything you want.*/
+ 
+    /*Writing the for loop and echo to print the numbers 1 to 1000. 
+However, skip the numbers that are multiples of 3 using continue.*/
+    
+    /**How to Use foreach
+In a foreach loop, array values are sequentially assigned to the key variable and value variable, then the code in the loop is repeatedly executed. An index number or a key (for associative arrays) is assigned to the key variable. However, note that the key variable is optional. */
+
+// Write a foreach loop using the $scores associative array where variable $key as the key and variable $value as the value
+
+
+ $scores = array('Math' => 70, 'Language' => 90, 'Science' => 80);
+
+    // Write the foreach loop below
+    foreach($scores as $key => $value){
+      echo $key.' : '.$value.' ';
+    }
+?>
+
+<?php
+/*Functions
+Creating Functions
+A function is a section of code designed to accomplish a specific task and return an output. Some common and useful functions are already embedded in PHP; those are called built-in functions. For example strlen returns the number of characters in a string. Here, the value in parentheses () is called an argument.*/
+ 
+    /*Using Functions
+Let's look at some other built-in functions: count returns the number of elements in an array; rand returns a random integer between the first argument and the second argument. There are many other PHP built-in functions, but you don't have to memorize them. It's better to look up and learn about useful functions for specific purposes..*/
+    
+    /**Practice for the above listed */
+   $str = 'progate';
+
+    // Print the length of $str using strlen
+    echo strlen($str);
+   
+    
+    echo '<br>';
+    
+    $array = array('HTML', 'CSS', 'PHP');
+
+    // Print the number of elements in $array using count
+    
+    echo count($array);
+    echo '<br>';
+    
+    // Print a random number between 10 and 15 using rand
+    
+    echo rand(10,15);
+?>
+
+<?php
+/*Making a Function
+Creating Functions (2)
+You can also create functions yourself. When you group code in one place, you can make changes to all the places it's used at once by editing the function containing it. This is much more manageable than changing many separate and nearly identical lines of code. Let's learn more about how to define functions in the next slide.*/
+    
+    /**Making a Function
+How to Create Functions
+Use the syntax: function functionName() { ... } to create a function. Just give your function a name and then call it using parentheses () like so: functionName(). */
+
+
+/**Making a Function
+Arguments
+When calling a function, you can pass a value to be used within the function. Values that are passed to a function are known as arguments. To use arguments in a function, you need to specify a corresponding parameter to receive the argument in the function definition. If there are multiple parameters, you need to separate each with a comma ,. */
+
+// Define the hello function
+    function hello(){
+      echo 'Hello , World!';
+    }
+    
+    // Call the hello function
+    hello();
+    
+    
+    echo '<br>';
+    // Define the printRectangleArea function
+    function printRectangleArea($height ,$width){
+      echo $height * $width;
+    }
+    
+    // Call the printRectangleArea function with (5, 10) as the argument
+    
+printRectangleArea(5,10);
 ?>
